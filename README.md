@@ -59,3 +59,19 @@ This full-stack application allows users to interact with YouTube videos through
 **RAG Pipeline:** Retrieves relevant transcript chunks based on user questions and supplies them as context to the LLM.
 
 **LLM Integration:** Used to generate context-aware answers based on the retrieved information from the YouTube video.
+
+
+# How It Works
+
+**Transcript Extraction:** The backend receives a YouTube video URL and retrieves the available transcript using the YouTube Transcript API.
+
+**Text Processing:** The transcript is cleaned and divided into smaller, meaningful chunks to make the content suitable for embedding and retrieval.
+
+**Embedding Generation:** Each transcript chunk is converted into a numerical vector representation using a sentence-transformer embedding model, capturing the semantic meaning of the content.
+
+**Vector Storage:** The generated embeddings and their corresponding transcript chunks are stored in ChromaDB, enabling efficient similarity-based searches.
+
+**Semantic Retrieval:** When a user asks a question, the question is converted into an embedding and compared against the stored vectors to retrieve the most relevant sections of the video transcript.
+
+**AI Response Generation:** The retrieved transcript sections are provided as context to the LLM along with the user's question. The LLM then generates a context-aware response based on the information retrieved from the video.
+

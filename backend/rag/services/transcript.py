@@ -6,12 +6,14 @@ def extract_video_id(url):
     match = re.search(pattern, url)
     
     if match:
+        print("valid URL DONE")
         return match.group(1)
     else:
         raise ValueError("Invalid YouTube URL")
 
 def get_transcript(video_url):
     video_id = extract_video_id(video_url)
+    print("TRANSCRIPTING DONE")
 
     ytt_api = YouTubeTranscriptApi()
     transcript = ytt_api.fetch(video_id)
@@ -20,4 +22,4 @@ def get_transcript(video_url):
     
 
 # test
-print(get_transcript("https://www.youtube.com/watch?v=HaVmh9GXb3U"))
+# print(get_transcript("https://www.youtube.com/watch?v=HaVmh9GXb3U"))

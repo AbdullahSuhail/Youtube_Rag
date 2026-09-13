@@ -10,3 +10,5 @@ def store_embeddings(chunks, embeddings):
             embeddings=[embeddings[i].tolist()],
             ids=[str(i)]
         )
+
+    print(collection.peek())

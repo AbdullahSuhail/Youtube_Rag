@@ -2,6 +2,23 @@
 
 This full-stack application allows users to interact with YouTube videos through an AI-powered conversational interface. The application extracts transcripts from YouTube videos, processes and splits the content into meaningful chunks, and converts them into vector embeddings for efficient semantic retrieval. Using a Retrieval-Augmented Generation (RAG) pipeline, relevant sections of the video are retrieved based on the user's query and provided as context to a Large Language Model (LLM), which generates accurate, context-aware responses. The system is built with a Django backend and React frontend, with a vector database used to store and retrieve video knowledge efficiently. Users can ask questions, request explanations, and summarize specific video content without manually watching or searching through the entire video.
 
+# SCREENSHOTS:
+
+## 1.Getting the Video URL
+<img width="1343" height="855" alt="00-GettingVIdeoURL" src="https://github.com/user-attachments/assets/8226fe24-ddda-4030-b485-867f96e01b0d" />
+
+## 2. Front Screen 
+<img width="1886" height="870" alt="01-FrontScreen" src="https://github.com/user-attachments/assets/fde6fcea-c146-425f-b195-dc47a9e5173f" />
+
+## 3. Pasting the URL and click 
+<img width="1882" height="858" alt="02-inputUrl" src="https://github.com/user-attachments/assets/974ba367-ace5-4038-b62f-6aa1f19bccaa" />
+
+## 4.Chatbox UI
+<img width="1896" height="861" alt="03-chatboxScreen" src="https://github.com/user-attachments/assets/6793b41a-8210-4991-ad99-b8b5c7620f76" />
+
+## Output from LLMs
+<img width="1283" height="735" alt="04_OutputFromLLM" src="https://github.com/user-attachments/assets/9617c3fe-81dc-41f8-9d90-7ea9df0e2a06" />
+
 # Key Features
 
 **YouTube Transcript Extraction:** Automatically retrieves transcripts from YouTube videos and processes the content for downstream analysis.
